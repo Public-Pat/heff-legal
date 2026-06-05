@@ -12,8 +12,8 @@
 
   // These variable match classnames in base.scss and mixins file. Please do not add to or edit the names of these.
   // THREE FONTS IS PLENTY!
-  --font-heading: "Funnel Display", sans-serif;
-  --font-highlight: "Geist Mono", monospace;
+  --font-heading: "Roboto", sans-serif;
+  --font-highlight: "IBM Plex Mono", monospace;
   --font-body: "Geist", sans-serif;
 
   // Type scale
@@ -52,10 +52,9 @@
   // ------------------------------
 
   // 1. Set some colors
-  --black: #171615;
-  --white: #F6F5F4;
-  --greyLight: #eaeaea;
-  --greyMedium: #d5d5d5;
+  --black: #282828;
+  --white: #FFFFFF;
+  --blue: #BDE2E9;
 
   // It is good to know what the light and dark colors are. This may be used directly in limited places, like where text appears over an image.
   --light-color: var(--white);
@@ -91,13 +90,13 @@
 
   // There are two available variations in colour. These are styled using the classNames color-variation-1/2
   --var-1-text: var(--dark-color);
-  --var-1-bg: #eaeaea;
+  --var-1-bg: #fafafa;
   --var-1-bg-tint: #{color.scale(#eaeaea, $lightness: -10%)};
   --var-1-text-tint: #{color.scale(#171615, $lightness: 10%)};
 
-  --var-1-button-color: var(--var-1-bg);
-  --var-1-button-bg-color: var(--var-1-text);
-  --var-1-button-border-color: var(--var-1-text);
+  --var-1-button-color: var(--white);
+  --var-1-button-bg-color: var(--black);
+  --var-1-button-border-color: var(--black);
   --var-1-button-hover-color: var(--var-1-bg);
   --var-1-button-hover-bg-color: var(--var-1-text-tint);
   --var-1-button-hover-border-color: var(--var-1-text-tint);
@@ -142,7 +141,7 @@
   // ------------------------------
 
   //  Border radius
-  --border-radius-sm: 0.25rem;
+  --border-radius-sm: 0.rem;
   --border-radius-md: 0.5rem;
 
   --general-border-radius: var(--border-radius-md);
