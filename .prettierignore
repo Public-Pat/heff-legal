@@ -1,0 +1,19 @@
+# Version Control
+/.git
+
+# Node/NPM
+/node_modules
+
+# Next JS
+/.next
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+
+# Prismic / Slicemachine
+src/slices/*/mocks.json
+src/slices/*/model.json
+prismicio-types.d.ts

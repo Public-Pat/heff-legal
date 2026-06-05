@@ -1,0 +1,80 @@
+{
+  "id": "large_media",
+  "type": "SharedSlice",
+  "name": "LargeMedia",
+  "description": "LargeMedia",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "video": {
+          "type": "Embed",
+          "config": {
+            "label": "Video",
+            "placeholder": ""
+          }
+        },
+        "caption": {
+          "type": "Text",
+          "config": {
+            "label": "Caption",
+            "placeholder": ""
+          }
+        },
+        "cropped": {
+          "type": "Boolean",
+          "config": {
+            "label": "Cropped",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        },
+        "mobile_image": {
+          "type": "Image",
+          "config": {
+            "label": "Mobile Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "no_padding": {
+          "type": "Boolean",
+          "config": {
+            "label": "No Padding",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        },
+        "background_colour": {
+          "type": "Select",
+          "config": {
+            "label": "Background Colour",
+            "placeholder": "",
+            "options": [
+              "Default",
+              "Variation 1",
+              "Variation 2"
+            ],
+            "default_value": "Default"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+.Holder {
+  // --------------------------- RULES ---------------------------
+
+  // ANYONE can edit the VALUES of style declarations for colors, type sizes, margins, paddings, gaps, alignment or justification
+  // SENIORS ONLY can add or remove declarations and edit layout values like display or position.
+
+  // -------------------------------------------------------------
+
+  margin: 0;
+  min-height: auto;
+  padding: var(--slice-vertical-padding) var(--site-margin);
+  border-radius: 0;
+  color: var(--text-color);
+  background-color: transparent;
+  @include media(md) {
+    padding: var(--slice-vertical-padding-md) var(--site-margin-md);
+  }
+}
+
+
+.Inner {
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+  &.InnerBg {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    border-radius: var(--border-radius-md);
+    padding: var(--site-margin);
+    @include media(md) {
+      padding: var(--site-margin-md);
+    }
+  }
+}
+
+.TextHolder {
+  text-align: left;
+  max-width: 75rem;
+
+  p {
+    @include type-base;
+  }
+  li,
+  ol {
+    @include type-base;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    max-width: 75rem;
+  }
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  &.Large {
+    p,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include type-lg;
+    }
+  }
+
+  &.XL {
+    @include media(md) {
+      max-width: 75rem;
+      text-align: left;
+    }
+    p,
+    li {
+      @include type-xl;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @include subheadings;
+    }
+  }
+}
+
+.LinkListHolder {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: var(--spacing-unit);
+}
+
+.Subheading {
+  h2 {
+    @include subheadings;
+  }
+}
+

@@ -1,0 +1,65 @@
+.Holder {
+  // --------------------------- ANYONE CAN EDIT ---------------------------
+
+  --margin: 0;
+  --padding: 2rem var(--site-margin-sm);
+  --padding-md: 6rem var(--site-margin-md) 3rem;
+  --border-radius: none;
+  --text-color: var(--white);
+  --background-color: var(--black);
+  --text-align: left;
+  --cols: 1;
+  --sm-cols: 2;
+  --md-cols: 3;
+  --lg-cols: 4;
+  --xl-cols: 4;
+  --grid-gap-sm: 2rem;
+  --grid-gap-md: 2rem;
+  --grid-gap-lg: 2rem;
+  --grid-gap-xl: 2rem;
+
+  --show-more-margin: 2rem 0 0 0;
+  --show-more-justify: center;
+
+  // --------------------------- SENIOR ONLY FROM HERE ---------------------------
+
+  margin: var(--margin);
+  padding: var(--padding);
+  border-radius: var(--border-radius);
+  color: var(--text-color);
+  background-color: var(--background-color);
+
+  @include media(md) {
+    padding: var(--padding-md);
+  }
+}
+
+.Grid {
+  display: grid;
+  align-items: start;
+  gap: var(--grid-gap-sm);
+  grid-template-columns: repeat(var(--cols), 1fr);
+
+  @include media(sm) {
+    grid-template-columns: repeat(var(--sm-cols), 1fr);
+  }
+  @include media(md) {
+    grid-template-columns: repeat(var(--md-cols), 1fr);
+    gap: var(--grid-gap-md);
+  }
+  @include media(lg) {
+    grid-template-columns: repeat(var(--lg-cols), 1fr);
+    gap: var(--grid-gap-lg);
+  }
+  @include media(xl) {
+    grid-template-columns: repeat(var(--xl-cols), 1fr);
+    gap: var(--grid-gap-xl);
+  }
+}
+
+.ShowMore {
+  margin: var(--show-more-margin);
+  display: flex;
+  justify-content: var(--show-more-justify);
+}
+

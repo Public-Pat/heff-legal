@@ -1,0 +1,100 @@
+.Header {
+  // --------------------------- RULES ---------------------------
+
+  // ANYONE can edit the VALUES of style declarations for colors, type sizes, margins, paddings, gaps, alignment or justification
+  // SENIORS ONLY can add or remove declarations and edit layout values like display or position.
+
+  // -------------------------------------------------------------
+
+  --my-margin: 2rem;
+
+  padding: 2rem;
+  margin: 2rem;
+  position: fixed; // fixed, relative, sticky
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  top: 0;
+  left: 50%;
+  transform: translateX(calc(-50% - 2rem));
+  width: calc(100% - 2 * var(--my-margin));
+  max-width: calc(var(--site-max-width) + 2 * var(--my-margin));
+
+  z-index: 100;
+  color: var(--text-color);
+  display: none;
+  mix-blend-mode: normal; // difference is good if you want to remove the BG colour but still show text over various colors
+  opacity: 1; // Important to keep for header transitions if you need them
+
+  @include media(lg) {
+    display: block;
+
+    // Scroll and position-based transforms and color changes:
+    transition: none; // Transition on hide or show
+
+    &.Hide {
+      // How do you want to hide the menu? Fade or animate outside the screen?
+      //transform: translateY(-100%); to animate upwards. Ugly as hell but popular.
+      //opacity: 0; Our preferred method if we HAVE to hide it. Which we hate.
+    }
+  }
+}
+
+.Background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: var(--bg-color);
+  // backdrop-filter: blur(10px); Nice effect on transparent BG colours
+
+  // Some MAD people like to animate in a BG as you leave the top of the page.
+  // We HATE this but if you need to you can with the below values
+
+  //opacity: 0;
+  //transition: opacity 2s ease-in-out;
+  &.Show {
+    //opacity: 1;
+  }
+}
+
+.Inner {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.Logo {
+  svg {
+    height: 2rem;
+    width: auto;
+    display: block;
+    path {
+      fill: currentColor;
+    }
+  }
+}
+
+.Nav {
+  ul {
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    li {
+      list-style: none;
+      padding: 0;
+      @include type-sm;
+      @include font-heading;
+      font-weight: normal;
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,11 @@
+@use "inputs";
+@use "button";
+@use "range";
+@use "radio";
+@use "select";
+@use "../mixins";
+
+label {
+  @include mixins.type-sm;
+  font-weight: normal;
+}

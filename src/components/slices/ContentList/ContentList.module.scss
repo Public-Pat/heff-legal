@@ -1,0 +1,74 @@
+.Holder {
+  // --------------------------- RULES ---------------------------
+
+  // ANYONE can edit the VALUES of style declarations for colors, type sizes, margins, paddings, gaps, alignment or justification
+  // SENIORS ONLY can add or remove declarations and edit layout values like display or position.
+
+  // -------------------------------------------------------------
+
+  margin: 0;
+  padding: var(--slice-vertical-padding) var(--site-margin);
+  border-radius: 0;
+  color: var(--text-color);
+  background-color: transparent;
+
+  @include media(md) {
+    padding: var(--slice-vertical-padding-md) var(--site-margin-md);
+  }
+}
+
+.Inner {
+  text-align: left;
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gap);
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.Headings {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  p {
+    @include h2;
+  }
+}
+
+.Subheading {
+  h2 {
+    @include subheadings;
+    margin: 0;
+  }
+}
+
+.CTA {
+  margin: var(--spacing-unit) 0;
+}
+
+.Grid {
+  display: grid;
+  align-items: start;
+  grid-template-columns: repeat(1, 1fr);
+  gap: calc(var(--grid-gap) * 2);
+  @include media(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--grid-gap) calc(var(--grid-gap) * 2);
+  }
+  @include media(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include media(xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+

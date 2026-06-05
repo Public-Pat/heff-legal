@@ -1,0 +1,115 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading_2": {
+				"__TYPE__": "FieldContent",
+				"value": "improve",
+				"type": "Text"
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "zebra",
+				"type": "Text"
+			},
+			"background_colour": {
+				"__TYPE__": "FieldContent",
+				"value": "Default",
+				"type": "Select"
+			},
+			"columns": {
+				"__TYPE__": "FieldContent",
+				"value": "Three",
+				"type": "Select"
+			},
+			"cards": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "ship",
+									"type": "Text"
+								}
+							],
+							[
+								"text",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Duis quis qui occaecat laborum pariatur."
+											}
+										}
+									]
+								}
+							],
+							[
+								"cta",
+								{
+									"key": "b7a68f3e-3b5c-48e3-862e-3ac0eba08c1a",
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev",
+										"text": "accept"
+									}
+								}
+							],
+							[
+								"icon",
+								{
+									"origin": {
+										"id": "main",
+										"url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
+										"width": 4752,
+										"height": 3168
+									},
+									"url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
+									"width": 4752,
+									"height": 3168,
+									"edit": {
+										"zoom": 1,
+										"crop": {
+											"x": 0,
+											"y": 0
+										},
+										"background": "transparent"
+									},
+									"alt": "draw",
+									"credits": null,
+									"__TYPE__": "ImageContent",
+									"thumbnails": {}
+								}
+							]
+						]
+					}
+				]
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sunt ad occaecat dolor duis proident ullamco est cillum incididunt eiusmod deserunt. Aliquip cupidatat do ea ea adipisicing eu excepteur enim."
+						}
+					}
+				]
+			},
+			"cards_colour": {
+				"__TYPE__": "FieldContent",
+				"value": "Default",
+				"type": "Select"
+			}
+		},
+		"items": []
+	}
+]

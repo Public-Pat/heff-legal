@@ -1,0 +1,76 @@
+.Item {
+  // --------------------------- RULES ---------------------------
+
+  // ANYONE can edit the VALUES of style declarations for colors, type sizes, margins, paddings, gaps, alignment or justification
+  // SENIORS ONLY can add or remove declarations and edit layout values like display or position.
+
+  // -------------------------------------------------------------
+  --icon-size: 2rem;
+
+  color: var(--text-color);
+  border-bottom: 1px solid;
+  width: 100%;
+
+  &:first-of-type {
+    border-top: 1px solid;
+  }
+}
+
+.Header {
+  margin: 0;
+}
+
+.Trigger {
+  display: grid !important;
+  grid-template-columns: 1fr var(--icon-size);
+  gap: var(--grid-gap);
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem 0 !important;
+  p {
+    @include font-highlight;
+    @include type-sm;
+    margin: 0;
+  }
+}
+
+.Trigger[data-state="closed"] {
+  svg:last-child {
+    display: none;
+  }
+}
+
+.Trigger[data-state="open"] {
+  border-bottom: var(--trigger-separator);
+  svg:first-child {
+    display: none;
+  }
+}
+
+.Icons {
+  display: flex;
+  align-items: center;
+  svg {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    fill: transparent;
+    overflow: visible;
+    path,
+    circle {
+      stroke: currentColor;
+      stroke-width: 2px;
+    }
+  }
+}
+
+.Content {
+  padding-bottom: var(--slice-vertical-padding);
+  p {
+    @include type-base;
+    margin: 2rem 0;
+  }
+  img {
+    margin: 2rem 0;
+  }
+}
+

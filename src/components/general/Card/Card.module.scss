@@ -1,0 +1,121 @@
+.Holder {
+  // --------------------------- RULES ---------------------------
+
+  // ANYONE can edit the VALUES of style declarations for colors, type sizes, margins, paddings, gaps, alignment or justification
+  // SENIORS ONLY can add or remove declarations and edit layout values like display or position.
+
+  --hover-transition: transform 0.2s ease-in-out;
+
+  // -------------------------------------------------------------
+
+  background: transparent;
+  padding: 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  min-height: 0;
+  transition: var(--hover-transition);
+  height: 100%;
+  &:hover {
+    transform: translate(0, -0.25rem);
+    img, video {
+      transform: scale(1.025);
+    }
+  }
+
+  &.HasBg {
+    background-color: var(--bg-tint-color);
+    border-radius: var(--general-border-radius);
+    .Content {
+      padding: var(--spacing-unit);
+    }
+    .Image {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+  }
+}
+
+.Inner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.Image {
+  position: relative;
+  z-index: 1;
+  border-radius: var(--general-border-radius);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background-color: var(--bg-tint-color);
+  margin-bottom: 0.5rem;
+  .StandardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--hover-transition);
+  }
+  .VideoFallbackImage {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--hover-transition);
+  }
+  video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--hover-transition);
+  }
+}
+
+.Content {
+  padding: 0;
+  text-align: left;
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.Title {
+  @include type-base;
+  font-weight: bold;
+  margin: 0;
+}
+
+.Text {
+  display: block;
+  p {
+    @include type-sm;
+  }
+  > :first-child {
+    margin-top: 0;
+  }
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.MockPost {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: var(--general-border-radius);
+  border: 1px dashed;
+  padding: var(--spacing-unit);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

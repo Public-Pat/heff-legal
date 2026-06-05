@@ -1,0 +1,110 @@
+{
+  "id": "feature",
+  "type": "SharedSlice",
+  "name": "Feature",
+  "description": "Feature",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading_2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "H2",
+            "placeholder": "If not filled then title will be h2",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,strong,em,hyperlink"
+          }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "Link",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null,
+            "allowText": true
+          }
+        },
+        "image_position": {
+          "type": "Select",
+          "config": {
+            "label": "Image Position",
+            "placeholder": "",
+            "options": [
+              "Right",
+              "Left"
+            ],
+            "default_value": "Right"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "video": {
+          "type": "Embed",
+          "config": {
+            "label": "Video",
+            "placeholder": ""
+          }
+        },
+        "video_ratio": {
+          "type": "Number",
+          "config": {
+            "label": "Video ratio",
+            "placeholder": "If the ratio of the video is not 16:9 then enter it here as a number"
+          }
+        },
+        "no_padding": {
+          "type": "Boolean",
+          "config": {
+            "label": "No Padding",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        },
+        "background_colour": {
+          "type": "Select",
+          "config": {
+            "label": "Background Colour",
+            "placeholder": "",
+            "options": [
+              "Default",
+              "Variation 1",
+              "Variation 2"
+            ],
+            "default_value": "Default"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

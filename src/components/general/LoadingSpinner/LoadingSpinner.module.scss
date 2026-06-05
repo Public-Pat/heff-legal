@@ -1,0 +1,59 @@
+.Holder {
+  // --------------------------- ANYONE CAN EDIT ---------------------------
+
+  --width: 6rem;
+  --speed: 1s;
+  --color: var(--black);
+  --strokeWidth: 0.2rem;
+
+  // --------------------------- SENIOR ONLY FROM HERE ---------------------------
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Ring {
+  color: var(--color);
+}
+
+.Ring,
+.Ring div {
+  box-sizing: border-box;
+}
+.Ring {
+  display: inline-block;
+  position: relative;
+  width: var(--width);
+  height: var(--width);
+}
+.Ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: calc(100% - 2 * var(--strokeWidth));
+  height: calc(100% - 2 * var(--strokeWidth));
+  margin: var(--strokeWidth);
+  border: var(--strokeWidth) solid currentColor;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: currentColor transparent transparent transparent;
+}
+.Ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.Ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.Ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

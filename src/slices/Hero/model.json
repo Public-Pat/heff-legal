@@ -1,0 +1,352 @@
+{
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Hero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading_1": {
+          "type": "StructuredText",
+          "config": {
+            "label": "H1",
+            "placeholder": "If not filled then title will be h1",
+            "allowTargetBlank": false,
+            "single": "heading1"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "cta": {
+          "type": "Link",
+          "config": {
+            "label": "CTA",
+            "placeholder": "Optional ctas",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": true,
+            "variants": [
+              "Primary",
+              "Secondary"
+            ]
+          }
+        },
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "background_video": {
+          "type": "Embed",
+          "config": {
+            "label": "Background video",
+            "placeholder": ""
+          }
+        },
+        "background_video_from_media_library": {
+          "type": "Link",
+          "config": {
+            "label": "Background Video from Media library",
+            "placeholder": "Add your own compressed video. This can perform faster than Vimeo",
+            "select": "media",
+            "allowText": false
+          }
+        },
+        "video_ratio": {
+          "type": "Number",
+          "config": {
+            "label": "Video ratio",
+            "placeholder": "If the ratio of the video is not 16:9 then enter it here as a number"
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "heroTextFirst",
+      "name": "Hero - Text First",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading_1": {
+          "type": "StructuredText",
+          "config": {
+            "label": "H1",
+            "placeholder": "If not filled then title will be h1",
+            "allowTargetBlank": false,
+            "single": "heading1"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "cta": {
+          "type": "Link",
+          "config": {
+            "label": "CTA",
+            "placeholder": "Optional ctas",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": true,
+            "variants": [
+              "Primary",
+              "Secondary"
+            ]
+          }
+        },
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "background_video": {
+          "type": "Embed",
+          "config": {
+            "label": "Background video",
+            "placeholder": ""
+          }
+        },
+        "background_video_from_media_library": {
+          "type": "Link",
+          "config": {
+            "label": "Background Video from Media library",
+            "placeholder": "Add your own compressed video. This can perform faster than Vimeo",
+            "select": "media",
+            "allowText": false
+          }
+        },
+        "video_ratio": {
+          "type": "Number",
+          "config": {
+            "label": "Video ratio",
+            "placeholder": "If the ratio of the video is not 16:9 then enter it here as a number"
+          }
+        },
+        "background_colour": {
+          "type": "Select",
+          "config": {
+            "label": "Background Colour",
+            "placeholder": "",
+            "options": [
+              "Default",
+              "Variation 1",
+              "Variation 2"
+            ],
+            "default_value": "Default"
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "heroTwoColumn",
+      "name": "Hero - Two Column",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading_1": {
+          "type": "StructuredText",
+          "config": {
+            "label": "H1",
+            "placeholder": "If not filled then title will be h1",
+            "allowTargetBlank": false,
+            "single": "heading1"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "cta": {
+          "type": "Link",
+          "config": {
+            "label": "CTA",
+            "placeholder": "Optional ctas",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": true,
+            "variants": [
+              "Primary",
+              "Secondary"
+            ]
+          }
+        },
+        "background_image": {
+          "type": "Image",
+          "config": {
+            "label": "Background Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "background_video": {
+          "type": "Embed",
+          "config": {
+            "label": "Background video",
+            "placeholder": ""
+          }
+        },
+        "background_video_from_media_library": {
+          "type": "Link",
+          "config": {
+            "label": "Background Video from Media library",
+            "placeholder": "Add your own compressed video. This can perform faster than Vimeo",
+            "select": "media",
+            "allowText": false
+          }
+        },
+        "video_ratio": {
+          "type": "Number",
+          "config": {
+            "label": "Video ratio",
+            "placeholder": "If the ratio of the video is not 16:9 then enter it here as a number"
+          }
+        },
+        "background_colour": {
+          "type": "Select",
+          "config": {
+            "label": "Background Colour",
+            "placeholder": "",
+            "options": [
+              "Default",
+              "Variation 1",
+              "Variation 2"
+            ],
+            "default_value": "Default"
+          }
+        }
+      },
+      "items": {}
+    },
+    {
+      "id": "heroTextOnly",
+      "name": "Hero - Text Only",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading_1": {
+          "type": "StructuredText",
+          "config": {
+            "label": "H1",
+            "placeholder": "If not filled then title will be h1",
+            "allowTargetBlank": false,
+            "single": "heading1"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Title",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "paragraph,strong,em"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Text",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "multi": "paragraph,strong,em"
+          }
+        },
+        "cta": {
+          "type": "Link",
+          "config": {
+            "label": "CTA",
+            "placeholder": "Optional ctas",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": true,
+            "variants": [
+              "Primary",
+              "Secondary"
+            ]
+          }
+        },
+        "background_colour": {
+          "type": "Select",
+          "config": {
+            "label": "Background Colour",
+            "placeholder": "",
+            "options": [
+              "Default",
+              "Variation 1",
+              "Variation 2"
+            ],
+            "default_value": "Default"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

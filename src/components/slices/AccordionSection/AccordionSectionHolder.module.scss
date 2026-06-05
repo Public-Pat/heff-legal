@@ -1,0 +1,53 @@
+.Holder {
+  // --------------------------- RULES ---------------------------
+
+  // ANYONE can edit the VALUES of style declarations for colors, type sizes, margins, paddings, gaps, alignment or justification
+  // SENIORS ONLY can add or remove declarations and edit layout values like display or position.
+
+  // -------------------------------------------------------------
+
+  margin: 0;
+  padding: var(--slice-vertical-padding) var(--site-margin);
+  border-radius: 0;
+  color: var(--text-color);
+  background-color: transparent;
+  min-height: 50lvh;
+
+  @include media(md) {
+    padding: var(--slice-vertical-padding-md) var(--site-margin-md);
+  }
+}
+
+.Inner {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr;
+  gap: var(--grid-gap);
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+  @include media(md) {
+    grid-template-columns: 1fr 2fr;
+  }
+  @include media(lg) {
+    grid-template-columns: 2fr 3fr;
+  }
+  @include media(xl) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.TextHolder {
+  > :first-child { margin-top: 0; }
+  > :last-child { margin-bottom: 0; }
+}
+
+.Subheading {
+  h2 {
+    @include subheadings;
+    margin: 0;
+  }
+}
+.Title {
+  @include h2;
+}
+

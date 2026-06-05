@@ -1,0 +1,166 @@
+@use 'sass:color';
+
+// WHO CAN EDIT:
+// Values: Junior, Mid, Senior
+// Structure: Senior
+// Additional vars: Senior
+
+:root {
+  // ------------------------------
+  // TYPOGRAPHY
+  // ------------------------------
+
+  // These variable match classnames in base.scss and mixins file. Please do not add to or edit the names of these.
+  // THREE FONTS IS PLENTY!
+  --font-heading: "Funnel Display", sans-serif;
+  --font-highlight: "Geist Mono", monospace;
+  --font-body: "Geist", sans-serif;
+
+  // Type scale
+  // Please direct designers to this tool to generate these values: https://www.fluid-type-scale.com/
+  // Below is the link for the default values we have set here
+  // https://www.fluid-type-scale.com/calculate?minFontSize=18&minWidth=430&minRatio=1.25&maxFontSize=20&maxWidth=1440&maxRatio=1.414&steps=xs%2Csm%2Cbase%2Cmd%2Clg%2Cxl&baseStep=base&prefix=type&useContainerWidth=false&includeFallbacks=false&useRems=true&remValue=10&decimals=2&previewFont=Inter&previewText=Almost+before+we+knew+it%2C+we+had+left+the+ground&previewWidth=1440
+
+  --type-xs: clamp(1.15rem, -0.15vi + 1.22rem, 1rem);
+  --type-sm: clamp(1.44rem, -0.03vi + 1.45rem, 1.41rem);
+  --type-base: clamp(1.8rem, 0.2vi + 1.71rem, 2rem);
+  --type-md: clamp(2.25rem, 0.57vi + 2rem, 2.83rem);
+  --type-lg: clamp(2.81rem, 1.17vi + 2.31rem, 4rem);
+  --type-xl: clamp(3.52rem, 2.12vi + 2.61rem, 5.65rem);
+
+  // ------------------------------
+  // SPACING
+  // ------------------------------
+
+  // This is your main value.
+  --spacing-unit: 2rem;
+
+  // Try not to alter the following layout values. They SHOULD just work.
+  --grid-gap: var(--spacing-unit);
+  --site-margin: var(--spacing-unit);
+  --site-margin-md: calc(var(--spacing-unit) * 2);
+  --slice-vertical-padding: calc(var(--spacing-unit) * 2);
+  --slice-vertical-padding-md: calc(var(--spacing-unit) * 3);
+  --site-max-width: 1440px;
+
+  // Once you have styled your header this is your variable to change.
+  --header-height: 8rem;
+  --header-height-md: 8rem;
+
+  // ------------------------------
+  // COLORS
+  // ------------------------------
+
+  // 1. Set some colors
+  --black: #171615;
+  --white: #F6F5F4;
+  --greyLight: #eaeaea;
+  --greyMedium: #d5d5d5;
+
+  // It is good to know what the light and dark colors are. This may be used directly in limited places, like where text appears over an image.
+  --light-color: var(--white);
+  --dark-color: var(--black);
+
+  // 2. Now set all the colours for the default variation
+
+  // Now we apply those to our text and bgs
+  --text-color: var(--dark-color);
+  --bg-color: var(--light-color);
+
+  // You may want a tint color of the BG for cards or for when a video loads
+  // You have to set the color with a hex as variables do not work here so make sure it matches whatever you are setting as the slice bg color.
+  --bg-tint-color: #{color.scale(#F6F5F4, $lightness: -10%)};
+  --text-tint-color: #{color.scale(#171615, $lightness: 5%)};
+
+  // Buttons
+  --button-color: var(--bg-color);
+  --button-bg-color: var(--text-color);
+  --button-border-color: var(--text-color);
+
+  --button-hover-color: var(--bg-tint-color);
+  --button-hover-bg-color: var(--text-tint-color);
+  --button-hover-border-color: var(--text-tint-color);
+
+  // Inputs
+  --input-background-color: var(--bg-tint-color);
+  --input-border-color: var(--text-color);
+  --input-text-color: var(--text-color);
+  --error-color: var(--text-color);
+
+  // 2. Now set all the colours for the variations
+
+  // There are two available variations in colour. These are styled using the classNames color-variation-1/2
+  --var-1-text: var(--dark-color);
+  --var-1-bg: #eaeaea;
+  --var-1-bg-tint: #{color.scale(#eaeaea, $lightness: -10%)};
+  --var-1-text-tint: #{color.scale(#171615, $lightness: 10%)};
+
+  --var-1-button-color: var(--var-1-bg);
+  --var-1-button-bg-color: var(--var-1-text);
+  --var-1-button-border-color: var(--var-1-text);
+  --var-1-button-hover-color: var(--var-1-bg);
+  --var-1-button-hover-bg-color: var(--var-1-text-tint);
+  --var-1-button-hover-border-color: var(--var-1-text-tint);
+
+  --var-1-input-background-color: var(--var-1-bg-tint);
+  --var-1-input-border-color: var(--var-1-bg);
+  --var-1-input-text-color: var(--var-1-text);
+  --var-1-error-color: var(--var-1-text);
+
+  --var-2-text: var(--dark-color);
+  --var-2-bg: #d5d5d5;
+  --var-2-bg-tint: #{color.scale(#d5d5d5, $lightness: -10%)};
+  --var-2-text-tint: #{color.scale(#171615, $lightness: 5%)};
+
+  --var-2-button-color: var(--var-2-bg);
+  --var-2-button-bg-color: var(--var-2-text);
+  --var-2-button-border-color: var(--var-2-text);
+  --var-2-button-hover-color: var(--var-2-bg);
+  --var-2-button-hover-bg-color: var(--var-2-text-tint);
+  --var-2-button-hover-border-color: var(--var-2-text-tint);
+
+  --var-2-input-background-color: var(--var-2-bg-tint);
+  --var-2-input-border-color: var(--var-2-bg);
+  --var-2-input-text-color: var(--var-2-text);
+  --var-2-error-color: var(--var-2-text);
+
+  // ------------------------------
+  // FORMS
+  // ------------------------------
+
+  // Buttons
+
+  --button-border-radius: var(--border-radius-sm); // 1000px if you want them fully rounded
+  // SET BUTTON FONT AND SIZE IN styles/mixins.scss
+
+  --input-height: 3rem;
+  --input-height-md: 3rem;
+  --input-border-radius: var(--border-radius-sm);
+
+  // ------------------------------
+  // MISC
+  // ------------------------------
+
+  //  Border radius
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+
+  --general-border-radius: var(--border-radius-md);
+
+  //  Transition easings
+  --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  --ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+
+  --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+}
+

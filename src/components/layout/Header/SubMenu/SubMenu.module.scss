@@ -1,0 +1,77 @@
+.SubMenuContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.MainLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.Arrow {
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+
+  .SubMenuContainer:hover & {
+    transform: rotate(180deg);
+  }
+}
+
+.Dropdown {
+  display: flex;
+  justify-content: flex-start;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 100px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  opacity: 1;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.DropdownList {
+  display: block !important;
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.DropdownItem {
+  margin: 0;
+}
+
+.DropdownLink {
+  width: 100%;
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: var(--black);
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+

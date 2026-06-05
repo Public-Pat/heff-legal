@@ -1,0 +1,58 @@
+.Header {
+  // --------------------------- RULES ---------------------------
+
+  // ANYONE can edit the VALUES of style declarations for colors, type sizes, margins, paddings, gaps, alignment or justification
+  // SENIORS ONLY can add or remove declarations and edit layout values like display or position.
+
+  // -------------------------------------------------------------
+
+  padding: 2rem;
+  margin: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  width: calc(100% - 2 * 1rem);
+  border-radius: var(--border-radius-sm);
+
+  @include media(lg) {
+    display: none;
+  }
+}
+
+.Inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Logo {
+  svg {
+    height: 2rem;
+    width: auto;
+    display: block;
+    path {
+      fill: currentColor;
+    }
+  }
+}
+
+.Inner {
+  button {
+    line-height: 0;
+    color: var(--text-color);
+    svg {
+      width: 2rem;
+      height: auto;
+      path {
+        stroke: currentColor;
+      }
+    }
+    &:hover {
+      color: var(--text-color);
+    }
+  }
+}
+

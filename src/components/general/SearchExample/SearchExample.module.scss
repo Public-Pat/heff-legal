@@ -1,0 +1,22 @@
+.Holder {
+  margin: 0;
+  padding: var(--slice-vertical-padding) var(--site-margin);
+  border-radius: 0;
+  color: var(--text-color);
+  background-color: transparent;
+
+  @include media(md) {
+    padding: var(--slice-vertical-padding) var(--site-margin-md);
+  }
+}
+
+.Inner {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr;
+  gap: var(--grid-gap);
+  @include media(md) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+

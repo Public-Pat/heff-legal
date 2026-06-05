@@ -1,0 +1,67 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Qui tempor veniam sunt dolor amet fugiat."
+						}
+					}
+				]
+			},
+			"anchor_link_id": {
+				"__TYPE__": "FieldContent",
+				"value": "history",
+				"type": "Text"
+			},
+			"cta": {
+				"__TYPE__": "RepeatableContent",
+				"type": "Link",
+				"value": [
+					{
+						"key": "ae9267b9-1951-4150-839a-7ebabc930b50",
+						"__TYPE__": "LinkContent",
+						"value": {
+							"__TYPE__": "ExternalLink",
+							"url": "http://google.com",
+							"text": "horse",
+							"variant": "Secondary"
+						}
+					}
+				]
+			},
+			"text_size": {
+				"__TYPE__": "FieldContent",
+				"value": "XL",
+				"type": "Select"
+			},
+			"background_color": {
+				"__TYPE__": "FieldContent",
+				"value": "Default",
+				"type": "Select"
+			},
+			"heading_2": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Produce"
+						}
+					}
+				]
+			},
+			"inner_background_colour": {
+				"__TYPE__": "FieldContent",
+				"value": "Default",
+				"type": "Select"
+			}
+		},
+		"items": []
+	}
+]

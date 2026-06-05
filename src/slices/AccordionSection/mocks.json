@@ -1,0 +1,79 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sint ut sit dolor ex ipsum aliqua non. Est in ipsum ad enim adipisicing cillum anim incididunt pariatur. Esse in deserunt elit consectetur sint culpa ullamco ut eiusmod et voluptate irure consectetur nostrud."
+						}
+					}
+				]
+			},
+			"items": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "beginning",
+									"type": "Text"
+								}
+							],
+							[
+								"content",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Labore fugiat commodo deserunt ad et esse adipisicing consectetur proident nisi elit duis ad. Mollit ad sit in Lorem Lorem ad eiusmod ex dolor occaecat. Pariatur et commodo ipsum."
+											}
+										}
+									]
+								}
+							]
+						]
+					}
+				]
+			},
+			"heading_2": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Troops"
+						}
+					}
+				]
+			},
+			"background_colour": {
+				"__TYPE__": "FieldContent",
+				"value": "Variation 1",
+				"type": "Select"
+			},
+			"description": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Tempor ex culpa enim laborum cupidatat do. Excepteur qui eiusmod excepteur."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

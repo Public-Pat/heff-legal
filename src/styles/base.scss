@@ -1,0 +1,261 @@
+// WHO CAN EDIT: Senior
+
+@use "mixins";
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  //overscroll-behavior: none;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  margin: 0;
+  color: var(--text-color);
+  background: var(--bg-color);
+  position: relative;
+
+  // Use system fonts: https://css-tricks.com/snippets/css/system-font-stack/
+  font-family: var(--font-body), sans-serif;
+
+  //  Crisper
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+
+  //  Basic open-type features
+  font-kerning: normal;
+  font-feature-settings: "calt" 1,
+  "liga" 1,
+  "rlig" 1,
+  "rvrn" 1,
+  "kern" 1,
+  "rclt" 1;
+
+  //  Prevent adjustments of font size after orientation changes
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+
+  //  Break words to prevent overflow
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+h1 {
+  @include mixins.h1;
+}
+
+h2 {
+  @include mixins.h2;
+}
+
+h3 {
+  @include mixins.h3;
+}
+
+h4 {
+  @include mixins.h4;
+}
+
+h5 {
+  @include mixins.h5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), sans-serif;
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace;
+  white-space: normal;
+}
+
+p,
+ul,
+ol,
+dl,
+li,
+blockquote,
+pre,
+address {
+  @include mixins.type-base;
+  @include mixins.font-body;
+  font-weight: 400;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+small {
+  display: inline-block;
+  @include mixins.type-sm;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+blockquote {
+  font-weight: bold;
+  padding-left: 1rem;
+}
+
+li {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 3rem;
+  list-style-type: disc;
+}
+
+ol {
+  padding-left: 1rem;
+  list-style-type: decimal;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+sup,
+sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+  font-size: 0.5em;
+}
+
+sub {
+  top: 0.4em;
+}
+
+.color-variation-1 {
+  color: var(--var-1-text) !important;
+  background-color: var(--var-1-bg) !important;
+  .button,
+  button,
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"] {
+    @include mixins.button(
+                    var(--var-1-button-color),
+                    var(--var-1-button-bg-color),
+                    var(--var-1-button-border-color),
+                    var(--var-1-button-hover-color),
+                    var(--var-1-button-hover-bg-color),
+                    var(--var-1-button-hover-border-color),
+    )
+  }
+  // TO DO: Add input styles
+}
+.color-variation-2 {
+  color: var(--var-2-text) !important;
+  background-color: var(--var-2-bg) !important;
+  .button,
+  button,
+  input[type="submit"],
+  input[type="button"],
+  input[type="reset"] {
+    @include mixins.button(
+                    var(--var-2-button-color),
+                    var(--var-2-button-bg-color),
+                    var(--var-2-button-border-color),
+                    var(--var-2-button-hover-color),
+                    var(--var-2-button-hover-bg-color),
+                    var(--var-2-button-hover-border-color),
+    )
+  }
+  // TO DO: Add input styles
+}
+
+.rich-text {
+  // Rich text styles
+  // To be built on by a senior developer
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a {
+      text-decoration: underline;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .block-img {
+    margin: 4rem 0;
+  }
+  .embed {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    max-width: 100%;
+
+    iframe,
+    object,
+    embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .Highlight {
+    background-color: var(--highlight-2);
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@import "forms";

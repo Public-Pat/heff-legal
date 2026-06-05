@@ -1,0 +1,145 @@
+{
+  "id": "image_grid",
+  "type": "SharedSlice",
+  "name": "ImageGrid",
+  "description": "ImageGrid",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading_2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "H2",
+            "placeholder": "If not filled then title will be h2",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "background_colour": {
+          "type": "Select",
+          "config": {
+            "label": "Background Colour",
+            "placeholder": "",
+            "options": [
+              "Default",
+              "Variation 1",
+              "Variation 2"
+            ],
+            "default_value": "Default"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,hyperlink,strong,em"
+          }
+        },
+        "images": {
+          "type": "Group",
+          "config": {
+            "label": "Images",
+            "repeat": true,
+            "fields": {
+              "grid_width": {
+                "type": "Select",
+                "config": {
+                  "label": "Grid Width",
+                  "placeholder": "Choose how large the card is on desktop screens",
+                  "options": [
+                    "Half",
+                    "Full",
+                    "Third",
+                    "Quarter",
+                    "Two Thirds"
+                  ],
+                  "default_value": "Half"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "caption": {
+                "type": "Text",
+                "config": {
+                  "label": "Caption",
+                  "placeholder": ""
+                }
+              },
+              "video": {
+                "type": "Embed",
+                "config": {
+                  "label": "Video",
+                  "placeholder": "Alternative video"
+                }
+              },
+              "prismic_video": {
+                "type": "Link",
+                "config": {
+                  "label": "Prismic video",
+                  "placeholder": "",
+                  "select": "media",
+                  "allowText": false
+                }
+              },
+              "poster_image": {
+                "type": "Image",
+                "config": {
+                  "label": "Poster image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "link": {
+                "type": "Link",
+                "config": {
+                  "label": "Link",
+                  "placeholder": "Optional link field",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              },
+              "ratio": {
+                "type": "Select",
+                "config": {
+                  "label": "Ratio",
+                  "placeholder": "",
+                  "options": [
+                    "Natural",
+                    "Portrait",
+                    "Landscape",
+                    "Square"
+                  ],
+                  "default_value": "Natural"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

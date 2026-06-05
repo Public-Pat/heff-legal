@@ -1,0 +1,87 @@
+{
+  "id": "content_list",
+  "type": "SharedSlice",
+  "name": "ContentList",
+  "description": "ContentList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading_2": {
+          "type": "StructuredText",
+          "config": {
+            "label": "H2",
+            "placeholder": "If not filled then title will be h2",
+            "allowTargetBlank": false,
+            "single": "heading2"
+          }
+        },
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "Title",
+            "placeholder": ""
+          }
+        },
+        "content": {
+          "type": "Group",
+          "config": {
+            "label": "Content",
+            "repeat": true,
+            "fields": {
+              "page": {
+                "type": "Link",
+                "config": {
+                  "label": "Page",
+                  "select": "document",
+                  "customtypes": [
+                    {
+                      "id": "page",
+                      "fields": [
+                        "title",
+                        "preview_image",
+                        "excerpt",
+                        "preview_vimeo",
+                        "preview_video"
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "cta": {
+          "type": "Link",
+          "config": {
+            "label": "CTA",
+            "placeholder": "",
+            "select": null,
+            "allowTargetBlank": true,
+            "allowText": true,
+            "repeat": false
+          }
+        },
+        "background_colour": {
+          "type": "Select",
+          "config": {
+            "label": "Background Colour",
+            "placeholder": "",
+            "options": [
+              "Default",
+              "Variation 1",
+              "Variation 2"
+            ],
+            "default_value": "Default"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+@use "../mixins";
+
+.button,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  @include mixins.button;
+}

@@ -1,0 +1,84 @@
+.Holder {
+  // --------------------------- RULES ---------------------------
+
+  // ANYONE can edit the VALUES of style declarations for colors, type sizes, margins, paddings, gaps, alignment or justification
+  // SENIORS ONLY can add or remove declarations and edit layout values like display or position.
+
+  // -------------------------------------------------------------
+
+  margin: 0;
+  padding: var(--site-margin);
+  @include media(md) {
+    padding: var(--site-margin-md);
+  }
+  &.NoPadding {
+    padding: 0;
+    .Inner {
+      max-width: 100%;
+    }
+    .ImageHolder {
+      border-radius: 0;
+    }
+  }
+}
+
+.Inner {
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+.ImageHolder {
+  width: 100%;
+  border-radius: var(--general-border-radius);
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &.Cropped {
+    height: 80lvh;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.DesktopOnly {
+  display: none;
+  @include media(md) {
+    display: block;
+  }
+}
+
+.MobileOnly {
+  display: block;
+  @include media(md) {
+    display: none;
+  }
+}
+
+.Caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  color: var(--light-color);
+  padding: var(--site-margin);
+  @include media(md) {
+    padding: var(--site-margin-md);
+  }
+  p {
+    max-width: 100rem;
+    margin: 0;
+    @include type-sm;
+  }
+}
+

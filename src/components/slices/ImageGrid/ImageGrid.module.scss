@@ -1,0 +1,127 @@
+.Holder {
+  // --------------------------- RULES ---------------------------
+
+  // ANYONE can edit the VALUES of style declarations for colors, type sizes, margins, paddings, gaps, alignment or justification
+  // SENIORS ONLY can add or remove declarations and edit layout values like display or position.
+
+  // -------------------------------------------------------------
+
+  margin: 0;
+  padding: var(--slice-vertical-padding) var(--site-margin);
+  border-radius: 0;
+  color: var(--text-color);
+  background-color: transparent;
+  @include media(md) {
+    padding: var(--slice-vertical-padding-md) var(--site-margin-md);
+  }
+}
+
+.TitlesHolder {
+  text-align: left;
+  max-width: var(--site-max-width);
+  margin: 0 auto calc(var(--spacing-unit) * 2) auto;
+  > :first-child { margin-top: 0; }
+  > :last-child { margin-bottom: 0; }
+}
+.Subheading {
+  h2 {
+    @include subheadings;
+    margin: 0;
+  }
+}
+.Title {
+  @include h2;
+}
+
+.Grid {
+  display: grid;
+  align-items: start;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--grid-gap);
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+
+  @include media(md) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+.Item {
+  @include media(md) {
+    &.Full {
+      grid-column: span 12;
+    }
+    &.Half {
+      grid-column: span 6;
+    }
+    &.Third {
+      grid-column: span 6;
+    }
+    &.Quarter {
+      grid-column: span 4;
+    }
+    &.TwoThirds {
+      grid-column: span 6;
+    }
+  }
+  @include media(lg) {
+    &.Full {
+      grid-column: span 12;
+    }
+    &.Half {
+      grid-column: span 6;
+    }
+    &.Third {
+      grid-column: span 4;
+    }
+    &.Quarter {
+      grid-column: span 3;
+    }
+    &.TwoThirds {
+      grid-column: span 8;
+    }
+  }
+
+  .Image, .VideoHolder {
+    border-radius: var(--general-border-radius);
+    overflow: hidden;
+  }
+
+  &.Portrait {
+    .Image, .VideoHolder {
+      width: 100%;
+      aspect-ratio: 2/3;
+      object-fit: cover;
+      object-position: center;
+    }
+    // TODO: Video support for fixed ratio
+  }
+  &.Landscape {
+    .Image, .VideoHolder {
+      width: 100%;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+  &.Square {
+    .Image, .VideoHolder {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}
+
+.Caption {
+  text-align: left;
+  margin-top: 0.5rem;
+  p {
+    @include type-sm;
+  }
+  > :first-child { margin-top: 0; }
+  > :last-child { margin-bottom: 0; }
+}
+
