@@ -12,10 +12,10 @@
   "dependencies": {
     "@mantine/hooks": "^8.1.0",
     "@next/third-parties": "^15.4.3",
-    "@prismicio/client": "^7.21.6",
+    "@prismicio/client": "^7.21.8",
     "@prismicio/migrate": "^0.0.2",
-    "@prismicio/next": "^2.2.1",
-    "@prismicio/react": "^3.4.0",
+    "@prismicio/next": "^2.2.4",
+    "@prismicio/react": "^3.4.1",
     "@radix-ui/react-accordion": "^1.2.11",
     "@splidejs/react-splide": "^0.7.12",
     "@types/mapbox-gl": "^3.4.1",
@@ -47,14 +47,14 @@
   },
   "devDependencies": {
     "@pigment-css/nextjs-plugin": "^0.0.30",
-    "@slicemachine/adapter-next": "^0.3.95",
+    "@slicemachine/adapter-next": "^0.3.96",
     "@svgr/webpack": "^8.1.0",
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
-    "slice-machine-ui": "^2.21.1",
+    "slice-machine-ui": "^2.21.3",
     "typescript": "^5"
   }
 }
