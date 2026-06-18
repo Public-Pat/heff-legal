@@ -54,7 +54,7 @@
   // 1. Set some colors
   --black: #282828;
   --white: #FFFFFF;
-  --blue: #BDE2E9;
+  --blue: #e8f8fc;
 
   // It is good to know what the light and dark colors are. This may be used directly in limited places, like where text appears over an image.
   --light-color: var(--white);
@@ -90,8 +90,8 @@
 
   // There are two available variations in colour. These are styled using the classNames color-variation-1/2
   --var-1-text: var(--dark-color);
-  --var-1-bg: #fafafa;
-  --var-1-bg-tint: #{color.scale(#eaeaea, $lightness: -10%)};
+  --var-1-bg: var(--blue);;
+  --var-1-bg-tint: #{color.scale(#ffffff, $lightness: -10%)};
   --var-1-text-tint: #{color.scale(#171615, $lightness: 10%)};
 
   --var-1-button-color: var(--white);
