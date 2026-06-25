@@ -90,7 +90,7 @@
 
   // There are two available variations in colour. These are styled using the classNames color-variation-1/2
   --var-1-text: var(--dark-color);
-  --var-1-bg: var(--blue);;
+  --var-1-bg: var(--blue);
   --var-1-bg-tint: #{color.scale(#ffffff, $lightness: -10%)};
   --var-1-text-tint: #{color.scale(#171615, $lightness: 10%)};
 
@@ -106,10 +106,10 @@
   --var-1-input-text-color: var(--var-1-text);
   --var-1-error-color: var(--var-1-text);
 
-  --var-2-text: var(--dark-color);
-  --var-2-bg: #d5d5d5;
-  --var-2-bg-tint: #{color.scale(#d5d5d5, $lightness: -10%)};
-  --var-2-text-tint: #{color.scale(#171615, $lightness: 5%)};
+  --var-2-text: var(--light-color);
+  --var-2-bg: var(--black);
+  --var-2-bg-tint: #{color.scale(#171615, $lightness: -10%)};
+  --var-2-text-tint: #{color.scale(#ffffff, $lightness: 5%)};
 
   --var-2-button-color: var(--var-2-bg);
   --var-2-button-bg-color: var(--var-2-text);
